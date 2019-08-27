@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+pricing:
+  serviceName: PRICING-SERVICE
+
+maps:
+  endpoint: http://localhost:9191/
+
+spring:
+  application:
+    name: vehicle-api
+
+  h2:
+    console:
+      enabled: true
+      path: /h2
+
+  datasource:
+    url: jdbc:h2:mem:vehicledata
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    service-url:
+      default-zone: http://localhost:8761/eureka/
+
+instance:
+  preferIpAddress: true
